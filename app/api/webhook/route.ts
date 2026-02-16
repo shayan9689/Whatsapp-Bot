@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error("Webhook error:", error);
     return twimlResponse(
-      "Sorry, something went wrong. Please try again later."
+      "Apologies, something went wrong. Please try again."
     );
   }
 }

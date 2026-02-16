@@ -11,27 +11,33 @@ const GREETING_ONLY_PATTERNS = [
   /^(good\s?(morning|afternoon|evening|night))[\s!.,?]*$/i,
   /^(howdy|yo|sup|what'?s up|wassup|waddup)[\s!.,?]*$/i,
   /^(greetings?|salutations?)[\s!.,?]*$/i,
-  /^(salaam|assalam|salam|asalam)[\s!.,?]*$/i,
+  /^(salaam|assalam|salam|asalam|assalamualaikum|assalamu\s*alaikum)[\s!.,?]*$/i,
   /^(how\s+are\s+you|how\s+r\s+u|hru)[\s!.,?]*$/i,
   /^(hey\s+there|hi\s+there)[\s!.,?]*$/i,
   /^(good\s+day|g'?day)[\s!.,?]*$/i,
+  /^(hey\s*$|hi\s*$)/i,
+  /^hello\s*[!.]*$/i,
 ];
 
 const GREETING_RESPONSE =
-  "Hello! 👋 I'm Shayan's portfolio assistant. Ask about his skills, projects, experience, or contact. Try: \"What are your skills?\" or \"Tell me about your projects\".";
+  "Hello. I'm Shayan's portfolio assistant. I can help with his skills, projects, experience, and contact details. What would you like to know?";
+
+function normalizeInput(text: string): string {
+  return text.replace(/\s+/g, " ").trim();
+}
 
 function isGreetingOnly(message: string): boolean {
-  const trimmed = message.trim();
-  if (trimmed.length > 60) return false;
-  return GREETING_ONLY_PATTERNS.some((pattern) => pattern.test(trimmed));
+  const normalized = normalizeInput(message);
+  if (normalized.length > 60) return false;
+  return GREETING_ONLY_PATTERNS.some((pattern) => pattern.test(normalized));
 }
 
 export async function processMessage(userMessage: string): Promise<string> {
-  const trimmed = userMessage.trim();
-  if (!trimmed) return "Please send a message to get a response.";
+  const trimmed = normalizeInput(userMessage);
+  if (!trimmed) return "Please send a message to get started.";
 
   const lower = trimmed.toLowerCase();
-  if (lower === "ping" || lower === "test") return "Pong! Bot is connected.";
+  if (lower === "ping" || lower === "test") return "Connected. How can I help?";
 
   if (isGreetingOnly(trimmed)) return GREETING_RESPONSE;
 
@@ -50,8 +56,6 @@ export async function processMessage(userMessage: string): Promise<string> {
     temperature: 0.3,
   });
 
-  return (
-    completion.choices[0]?.message?.content ??
-    "This information is not available in the portfolio."
-  );
+  const reply = completion.choices[0]?.message?.content?.trim();
+  return reply ?? "This information is not available in the portfolio.";
 }
