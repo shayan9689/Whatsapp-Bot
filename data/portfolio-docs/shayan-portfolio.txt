@@ -1,0 +1,105 @@
+# Shayan Umair - Portfolio
+
+## About Me
+
+I'm Shayan Umair, a passionate Computer Science student specializing in AI and Data Science at Lahore Leads University. With 1+ year of experience, I build intelligent systems that solve real-world problems across various industries.
+
+I actively freelance and maintain partnerships with international clients, delivering solutions across web applications and mobile apps using React, Next.js, Tailwind CSS, Flutter, and React Native.
+
+Business Development Intern candidate with strong analytical, communication, and problem-solving skills. Eager to contribute to market research and strategic growth initiatives.
+
+## Contact
+
+- Email: shayan19609@gmail.com
+- Phone: +92 310 7679332
+- Location: Gulburg Sargodha, Pakistan
+- LinkedIn: Shayan Umair
+- GitHub: shayan9689
+- Portfolio: shayan-portfolio-lac.vercel.app
+
+## Education
+
+- BS Computer Science - AI Specialization, Lahore Leads University (2024-Present). Specialized in Artificial Intelligence, Machine Learning, and Data Science with focus on deep learning, NLP, and computer vision applications.
+- Advanced Data Science Certification, Coursera (2024). Comprehensive certification covering ML, Deep Learning, MLOps, and production deployment best practices.
+
+## Professional Experience
+
+### AI Engineer & Data Scientist (Freelance)
+Fiverr & International Clients | 2024 - Present
+
+Delivering 100+ AI/ML projects for international clients through Fiverr and long-term partnerships. Specializing in machine learning model development, data engineering pipelines, and full-stack AI integration. Successfully completed projects across healthcare, finance, e-commerce, and automation domains.
+
+- Completed 100+ projects in AI/ML, Data Science, and Data Engineering
+- Developed production-ready ML models for healthcare, finance, and e-commerce
+- Built end-to-end data pipelines and ETL systems for large-scale data processing
+- Integrated AI capabilities into web and mobile applications
+- Maintained long-term relationships with international clients
+
+### Data Science (Freelance)
+Industry Internship | Summer
+
+Worked on predictive analytics projects, developed data pipelines, and created stakeholder-ready dashboards. Gained hands-on experience in production ML systems and data visualization.
+
+- Developed predictive models for business analytics
+- Performed feature engineering and data preprocessing
+- Created interactive dashboards for data visualization
+- Collaborated with cross-functional teams on data-driven solutions
+
+## Skills & Technologies
+
+### Main Skills (Proficiency)
+- Machine Learning & AI: 95%
+- Data Science & Analysis: 93%
+- Data Engineering: 90%
+- Model Deployment & MLOps: 88%
+- Web Development (React/Next.js): 85%
+- Mobile Development (Flutter/React Native): 82%
+
+### Data Science & AI
+Python, Pandas/Numpy, TensorFlow/Keras, PyTorch, Scikit-learn
+
+### Data Analysis & Engineering
+Data Analysis, Apache Spark, SQL, MongoDB, AWS/GCP
+
+### Model Deployment & MLOps
+Flask/FastAPI, Docker, Kubernetes, Azure ML, MLflow
+
+### Web Development
+React, Next.js, Tailwind CSS, Node.js, JavaScript/TypeScript
+
+### Mobile Development
+Flutter, React Native, Expo, Firebase
+
+## Expertise Areas
+
+- AI/ML: Machine Learning, Deep Learning, Computer Vision, NLP
+- Data Science: Data Analysis, Statistical Modeling, Predictive Analytics
+- Data Engineering: ETL Pipelines, Data Warehousing, Big Data Processing
+- Web Development: React, Next.js, Tailwind CSS, Node.js
+- Mobile Development: Flutter, React Native, Expo
+
+## Featured Projects
+
+1. **Franchise Statement Automation System** - Enterprise automation replacing manual Excel/Sheets workflows. Consolidates revenue, expenses, and fees into unified pipeline. Python, Data Engineering, Automation, PDF Generation.
+
+2. **Smart University Neighborhood Advisory System** - AI-powered platform analyzing rental prices, transportation, safety, and job markets to help students choose optimal neighborhoods. Python, Machine Learning, Data Analysis, Chatbot, Geospatial Analysis.
+
+3. **AI-Powered Multi-Platform Social Media Auto-Posting System** - Automated social media management with Graph API integrations (LinkedIn, Facebook, YouTube, TikTok). Gemini AI generates titles, descriptions, and hashtags. Python, AI Integration, API Development.
+
+4. **HIPAA-Compliant Healthcare Document Compliance Chatbot** - Desktop healthcare compliance solution with secure chatbot for automated document verification. PDF/OCR extraction, Excel export, regulatory analysis. Python, PyQt, OCR, HIPAA Compliance.
+
+5. **Human Activity Recognition from Video** - Computer vision system classifying 15 human activities using fine-tuned EfficientNet-B3. Trained on 12,600 labeled images. Python, TensorFlow, Computer Vision, Deep Learning.
+
+6. **Skeleton-Based Human Activity Recognition (LSTM/ST-GCN)** - Advanced activity recognition using 3D skeleton data from NTU RGB+D dataset. PyTorch, LSTM, ST-GCN, Computer Vision.
+
+7. **Emergency Towing Service Flutter Application** - Cross-platform Flutter app with real-time location tracking, ETA estimates, dynamic pricing. Flutter, Firebase, Google Maps, Mobile Development.
+
+8. **Deep Learning-Based Skin Disease Classification** - Medical AI for automated dermatology diagnostics trained on DermNet dataset. ResNet, DenseNet, EfficientNet. Python, TensorFlow, Keras, Medical AI.
+
+9. **YOLO-Based Autonomous Pilot Transfer Safety System** - Computer vision using YOLOv8 and DeepSort for maritime pilot transfer safety. Python, YOLOv8, Computer Vision, DeepSort, Safety Systems.
+
+10. **AI Voice Call Agent with Twilio Integration** - Intelligent voice automation handling inbound/outbound calls via Twilio API. OpenAI LLM for transcript processing, Alloy TTS for voice synthesis. Python, Twilio, OpenAI, Voice AI.
+
+11. **EduPath - Smart Student Advisory Bot** - Intelligent chatbot helping students choose universities and programs. Analyzes age, education, CGPA, interests for personalized recommendations. Python, Flask, Chatbot, NLP.
+
+12. **HealthGenix - Online Gym & Rehabilitation App** - React Native fitness app with real-time camera-based exercise monitoring via MediaPipe. Analyzes body angles, counts exercises, personalized rehabilitation and diet plans. React Native, Expo, MediaPipe, Express.js, MySQL.
