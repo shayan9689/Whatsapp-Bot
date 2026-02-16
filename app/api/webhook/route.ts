@@ -3,6 +3,9 @@
  */
 
 import { NextRequest, NextResponse } from "next/server";
+
+// Allow up to 30s for RAG + OpenAI (Vercel Pro; Hobby caps at 10s)
+export const maxDuration = 30;
 import { retrieveContext } from "@/lib/rag";
 import { openai, SYSTEM_PROMPT } from "@/lib/openai";
 
@@ -23,6 +26,14 @@ function isGreeting(message: string): boolean {
   return GREETING_PATTERNS.some((pattern) => pattern.test(trimmed));
 }
 
+// GET: health check / webhook validation (visit in browser to test)
+export async function GET() {
+  return NextResponse.json({
+    status: "ok",
+    message: "WhatsApp webhook is live. Twilio sends POST requests here.",
+  });
+}
+
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData();
@@ -31,6 +42,12 @@ export async function POST(request: NextRequest) {
 
     if (!body.trim()) {
       return twimlResponse("Please send a message to get a response.");
+    }
+
+    // Quick test - no API calls (use to verify Twilio → Vercel works)
+    const trimmed = body.trim().toLowerCase();
+    if (trimmed === "ping" || trimmed === "test") {
+      return twimlResponse("Pong! Bot is connected.");
     }
 
     // Handle greetings with a friendly welcome
