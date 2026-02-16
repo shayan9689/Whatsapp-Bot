@@ -36,9 +36,10 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   try {
-    const formData = await request.formData();
-    const body = formData.get("Body")?.toString() ?? "";
-    const from = formData.get("From")?.toString() ?? "";
+    // Twilio sends application/x-www-form-urlencoded
+    const text = await request.text();
+    const params = new URLSearchParams(text);
+    const body = params.get("Body") ?? "";
 
     if (!body.trim()) {
       return twimlResponse("Please send a message to get a response.");
