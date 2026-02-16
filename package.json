@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@chroma-core/openai": "^0.1.9",
+    "@upstash/redis": "^1.36.2",
     "chromadb": "^3.1.8",
     "next": "14.2.18",
     "openai": "^4.73.0",
@@ -19,13 +20,13 @@
     "twilio": "^5.3.4"
   },
   "devDependencies": {
-    "dotenv": "^16.4.5",
-    "tsx": "^4.19.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "dotenv": "^16.4.5",
     "eslint": "^8",
     "eslint-config-next": "14.2.18",
+    "tsx": "^4.19.2",
     "typescript": "^5"
   }
 }

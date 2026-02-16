@@ -2,6 +2,10 @@
 
 A production-ready WhatsApp chatbot using Next.js, Twilio, OpenAI, and Chroma (RAG). Answers questions from your portfolio documents.
 
+**Features:**
+- Web chat UI + WhatsApp (Twilio)
+- Bidirectional sync: messages from web appear in WhatsApp; WhatsApp messages appear in web
+
 ## Tech Stack
 
 - **Next.js 14** (App Router)
@@ -55,7 +59,11 @@ Required:
 - `TWILIO_ACCOUNT_SID` - From [Twilio Console](https://console.twilio.com)
 - `TWILIO_AUTH_TOKEN` - From Twilio Console
 - `TWILIO_WHATSAPP_NUMBER` - e.g. `whatsapp:+14155238886` (Sandbox)
-- `CHROMA_URL` - Default `http://localhost:8000` for local Chroma
+- `CHROMA_API_KEY`, `CHROMA_TENANT`, `CHROMA_DATABASE` - From [Chroma Cloud](https://trychroma.com)
+
+For web ↔ WhatsApp sync:
+- `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` - From [Upstash](https://console.upstash.com) (free tier)
+- `MIRROR_WHATSAPP_NUMBER` - (optional) Your WhatsApp number to receive copies of web chat messages
 
 ### 4. Add Portfolio Documents
 
@@ -82,11 +90,16 @@ npm run dev
 ## Project Structure
 
 ```
-/app/api/webhook/route.ts   # Twilio webhook handler
+/app/page.tsx               # Web chat UI
+/app/api/webhook/route.ts   # Twilio webhook (WhatsApp)
+/app/api/chat/route.ts      # Chat API for web frontend
+/app/api/messages/route.ts  # Poll messages (WhatsApp → web)
+/lib/bot.ts                 # Shared RAG + reply logic
+/lib/redis.ts               # Message storage (Upstash)
+/lib/twilio-send.ts         # Send WhatsApp (web → WhatsApp mirror)
 /lib/openai.ts              # OpenAI client
 /lib/rag.ts                 # RAG: chunk, index, retrieve
 /lib/vector.ts              # Chroma client
-/lib/load-portfolio.ts      # Load docs from data folder
 /data/portfolio-docs/       # Your .txt / .md files
 /scripts/index-portfolio.ts # Indexing script
 ```
